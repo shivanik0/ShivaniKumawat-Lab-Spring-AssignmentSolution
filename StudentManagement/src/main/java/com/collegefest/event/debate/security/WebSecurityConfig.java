@@ -18,7 +18,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	public UserDetailsService userDetailsService() {
 		return new UserDetailsServiceImpl();
 	}
-	
+
 	@Bean
 	public PasswordEncoder passwordEncoder() {
 		return NoOpPasswordEncoder.getInstance();
@@ -45,12 +45,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 		.hasAuthority("ADMIN")
 		.anyRequest().authenticated()
 		.and()
-		.formLogin().loginProcessingUrl("/login").successForwardUrl("/Student/show-hello").permitAll()
+		.formLogin().loginProcessingUrl("/login").successForwardUrl("/Student/show-students")
+		.defaultSuccessUrl("/Student/show-students", true)
+		.permitAll()
 		.and()
 		.logout().logoutSuccessUrl("/login").permitAll()
-        .and()
-        .exceptionHandling().accessDeniedPage("/Student/403")
-        .and()
-        .cors().and().csrf().disable();
+		.and()
+		.exceptionHandling().accessDeniedPage("/Student/403")
+		.and()
+		.cors().and().csrf().disable();
 	}
 }

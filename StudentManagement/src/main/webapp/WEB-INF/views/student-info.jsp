@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>CRM</title>
+<title>College Fest</title>
 <style>
 a:hover#addLink, a:active#addLink {
 	background-color: #D3D3D3;

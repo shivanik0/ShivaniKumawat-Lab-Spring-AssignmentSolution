@@ -19,17 +19,17 @@ import com.collegefest.event.debate.service.IStudentService;
 @Controller
 @RequestMapping ("/Student")
 public class StudentController {
-	
+
 	@Autowired
 	private IStudentService studentService;
 
 	@RequestMapping (method = RequestMethod.POST, path="/add-student")
 	//@RequestMapping ("/add-student")
-	public String add(@RequestParam ("id") Integer id, @RequestParam ("firstName") String firstname, @RequestParam ("lastName") String lastname, @RequestParam ("course") String course, @RequestParam ("country") String country) {
+	public String add(@RequestParam ("firstName") String firstname, @RequestParam ("lastName") String lastname, @RequestParam ("course") String course, @RequestParam ("country") String country) {
 		Student student = new Student(firstname, lastname, course, country);
 		System.out.println("Student added "+ student.getFirstName());
 		studentService.addStudent(student);
-	
+
 		return "redirect:show-students";
 	}
 
@@ -38,7 +38,7 @@ public class StudentController {
 	public ResponseEntity<String> displtest() {
 		return new ResponseEntity<String>("Hello",HttpStatus.ACCEPTED);
 	}
-	
+
 	@RequestMapping (method = RequestMethod.GET, path="/show-students")
 	public ModelAndView display(ModelAndView mav) {
 		List <Student> students= studentService.displayStudent();
@@ -52,7 +52,7 @@ public class StudentController {
 			return mav;
 		}		
 	}
-	
+
 	@RequestMapping (method = RequestMethod.GET,path = "/show-form")
 	public String showStudentForm() {
 		return "student-form";		
@@ -92,7 +92,7 @@ public class StudentController {
 			return mav;
 		}
 	}
-	
+
 	@RequestMapping(value = "/403")
 	public ModelAndView accesssDenied(Principal user) {
 
@@ -103,7 +103,7 @@ public class StudentController {
 			+ ", you do not have permission to access this page!");
 		} else {
 			model.addObject("msg", 
-			"You do not have permission to access this page!");
+					"You do not have permission to access this page!");
 		}
 
 		model.setViewName("403");

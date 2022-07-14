@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>CRM</title>
+<title>College Fest</title>
 <style type="text/css">
 input[type=text] {
 	width: 50%;
@@ -55,8 +55,7 @@ input[type=submit] {
 <body>
 	<div>
 		<h1
-			style="width: 100%; background: #58adbe; padding: 30px; text-align: center">Customer
-			Relationship Management</h1>
+			style="width: 100%; background: #58adbe; padding: 30px; text-align: center">Debate Event</h1>
 		<form class="form" action="/StudentResource/Student/add-student"
 			method="post">
 			<h3 class="h3">Save Student</h3>
@@ -66,14 +65,14 @@ input[type=submit] {
 			<label class="labels">Last Name:</label> <input type="text"
 				name="lastName" placeholder="Last Name" /> <br> <label
 				class="labels">Course:</label> <input type="text" name="course"
-				placeholder="Course" /> <label
+				placeholder="Course" /> <br><label
 				class="labels">Country:</label> <input type="text" name="country"
 				placeholder="Country" /><br>
 			<div class="submit">
 				<input type="submit" name="s" value="Save" />
 			</div>
 			<a class="backToList"
-				href="/StudentResourse/Student/show-students">Back To List</a>
+				href="/StudentResource/Student/show-students">Back To List</a>
 		</form>
 	</div>
 </body>

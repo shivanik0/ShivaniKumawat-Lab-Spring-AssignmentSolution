@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>CRM</title>
+<title>College Fest</title>
 <style type="text/css">
 input[type=text] {
 	width: 50%;
@@ -67,7 +67,7 @@ input[type=submit] {
 					" placeholder='StudentId' /> <br><br> <label class='labels'>First Name: </label> <input type='text' value='"+stu.getFirstName()+
 					"' name='firstName' placeholder='First Name' /><br> <label class='labels'>Last Name: </label> <input type='text' value='"+stu.getLastName()+ 
 					"' name='lastName' placeholder='Last Name' /><br><label class='labels'>Course: </label> <input type='text' value='"+stu.getCourse()+ 
-					"' name='course' placeholder='Course' /><label class='labels'>Country: </label> <input type='text' value='"+stu.getCountry()+ 
+					"' name='course' placeholder='Course' /><br><label class='labels'>Country: </label> <input type='text' value='"+stu.getCountry()+ 
 					"' name='country' placeholder='Country' /><br><input class='submit' type='submit' name='s' value='Save' />");
 			%>
 			<a class="backToList"
